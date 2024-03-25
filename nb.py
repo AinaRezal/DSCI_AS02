@@ -35,8 +35,8 @@ y_pred = nbmodel.predict(x_test)
 
 # To see how prediction can be reliable
 accuracy = accuracy_score(y_pred, y_test)
-f1score = round(f1_score(y_test, y_pred, average='weighted'), 2)
-precision = round(precision_score(y_test, y_pred, average='weighted'), 2)
+f1score = round(f1_score(y_test, y_pred, average='weighted'), 4)
+precision = round(precision_score(y_test, y_pred, average='weighted'), 4)
 print('Accuracy:', accuracy)
 print('f1 score:', f1score)
 print('Precision:', precision)
