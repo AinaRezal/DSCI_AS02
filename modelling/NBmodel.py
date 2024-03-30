@@ -39,13 +39,13 @@ f1score = round(f1_score(y_test, y_pred, average='weighted'), 4)
 precision = round(precision_score(y_test, y_pred, average='weighted'), 4)
 
 # Creating file to store trained model
-model_path = os.path.join(curDir, 'nbm.pickle')
+model_path = os.path.join(curDir, 'naivebayes.pickle')
 with open(model_path, 'wb') as nb_pickle:
     pickle.dump(nbmodel, nb_pickle)
     nb_pickle.close()
 
 # Creating file to store output    
-model_path2 = os.path.join(curDir, 'outputnb.pickle')
+model_path2 = os.path.join(curDir, 'output_naivebayes.pickle')
 with open(model_path2, 'wb') as outputnb_pickle:
     pickle.dump(mapping, outputnb_pickle)
     outputnb_pickle.close()

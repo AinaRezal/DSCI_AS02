@@ -5,7 +5,6 @@ import pickle
 import os
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score
 from sklearn.inspection import permutation_importance
 from sklearn.metrics import r2_score, accuracy_score, f1_score, precision_score
 
@@ -41,11 +40,11 @@ print('F1 Score:', f1score)
 precision = precision_score(y_test, y_pred_classes, average='weighted')
 print('Precision:', precision)
 
-model_path = os.path.join(curDir, 'linear_regression_model.pickle')
+model_path = os.path.join(curDir, 'linearregression.pickle')
 with open(model_path, 'wb') as reg_pickle:
     pickle.dump(reg_model, reg_pickle)
  
-model_path2 = os.path.join(curDir, 'output_linear_regression.pickle')
+model_path2 = os.path.join(curDir, 'output_linearregression.pickle')
 with open(model_path2, 'wb') as output_pickle:
     pickle.dump(mapping, output_pickle)
 

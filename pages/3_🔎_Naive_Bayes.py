@@ -37,11 +37,11 @@ with col1[0]:
     st.table(table_info)
 
 with col1[1]:
-    st.image('NBfeatures_importance.png')
+    st.image('Graphs/NBfeatures_importance.png')
 
 # Pickle for prediction and mapping values
-nb_pickle = open('nbm.pickle', 'rb')
-map_pickle = open('outputnb.pickle', 'rb')
+nb_pickle = open('pickle_output/naivebayes.pickle', 'rb')
+map_pickle = open('pickle_output/output_naivebayes.pickle', 'rb')
 
 nbm = pickle.load(nb_pickle)
 mapping = pickle.load(map_pickle)
